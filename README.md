@@ -33,7 +33,7 @@ Single Thread/Multi-thread shows the number of seconds it takes to do a 5000x500
 
 You will need the following installed:
 
-1. A **JDK**, version 21 or later (for the `switch` expressions used in argument parsing).
+1. A **JDK**, version 21 or later.
 2. **Make** (optional, but recommended for easy building).
 3. **Gnuplot** (required *only* for generating PNG images).
 
@@ -135,5 +135,12 @@ image.dat  5.42s user 0.06s system 735% cpu 0.746 total
 time java --add-modules jdk.incubator.vector MandelbrotSimdThreaded png=1 width=5000 height=5000 > image.dat
 WARNING: Using incubator modules: jdk.incubator.vector
 2.43s user 0.09s system 535% cpu 0.473 total
+```
+
+**Generating a 20000x20000 data file multiple worker threads**
+``` sh
+time java --add-modules jdk.incubator.vector MandelbrotSimdThreaded png=1 width=20000 height=20000 > image.dat
+WARNING: Using incubator modules: jdk.incubator.vector
+26.60s user 0.45s system 669% cpu 4.041 total
 ```
 
