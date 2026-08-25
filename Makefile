@@ -20,7 +20,7 @@ simd.stamp: $(SIMD_SRC)
 run: build.stamp
 	java Mandelbrot
 
-run-pthread: build.stamp
+run-threaded: build.stamp
 	java MandelbrotThreaded
 
 run-simd: simd.stamp
